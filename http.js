@@ -3,7 +3,7 @@ const vmRegion = process.env.FLY_REGION || "local";
 const locale = process.env.LOCALE || "nb-NO";
 console.log(`Doing it from ${vmRegion}`);
 export default {
-  port: 3000,
+  port: 80,
   fetch(request) {
     const region = request.headers.get("fly-region") || "??";
     const url = new URL(request.url);
